@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30225.117
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{934A34E5-E2BE-4D38-ADAA-A306CF5FCDCD}"
+	ProjectSection(SolutionItems) = preProject
+		.platform\nginx\conf.d\elasticbeanstalk\01_custom.conf = .platform\nginx\conf.d\elasticbeanstalk\01_custom.conf
+		Procfile = Procfile
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "skymain", "skymain\skymain.csproj", "{43B6FB8F-70D9-4095-8750-12EEC4E42DDD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "skysub", "skysub\skysub.csproj", "{C0A5AE6E-DFD2-443F-959F-8A490FBC765C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{43B6FB8F-70D9-4095-8750-12EEC4E42DDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43B6FB8F-70D9-4095-8750-12EEC4E42DDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43B6FB8F-70D9-4095-8750-12EEC4E42DDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43B6FB8F-70D9-4095-8750-12EEC4E42DDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0A5AE6E-DFD2-443F-959F-8A490FBC765C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0A5AE6E-DFD2-443F-959F-8A490FBC765C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0A5AE6E-DFD2-443F-959F-8A490FBC765C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0A5AE6E-DFD2-443F-959F-8A490FBC765C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4BA454E5-2C6B-466A-9A4F-A645E656399B}
+	EndGlobalSection
+EndGlobal
