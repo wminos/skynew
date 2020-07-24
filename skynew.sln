@@ -6,12 +6,15 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{934A34E5-E2BE-4D38-ADAA-A306CF5FCDCD}"
 	ProjectSection(SolutionItems) = preProject
 		.platform\nginx\conf.d\elasticbeanstalk\01_custom.conf = .platform\nginx\conf.d\elasticbeanstalk\01_custom.conf
+		build-deploy.sh = build-deploy.sh
+		build.sh = build.sh
+		deploy.sh = deploy.sh
 		Procfile = Procfile
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "skymain", "skymain\skymain.csproj", "{43B6FB8F-70D9-4095-8750-12EEC4E42DDD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "skymain", "skymain\skymain.csproj", "{43B6FB8F-70D9-4095-8750-12EEC4E42DDD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "skysub", "skysub\skysub.csproj", "{C0A5AE6E-DFD2-443F-959F-8A490FBC765C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "skysub", "skysub\skysub.csproj", "{C0A5AE6E-DFD2-443F-959F-8A490FBC765C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
