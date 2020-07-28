@@ -24,6 +24,7 @@ namespace skymain
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
+            services.AddLogging(logging => logging.AddAWSProvider());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

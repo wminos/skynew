@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  skymain:
+    image: ${DOCKER_REGISTRY-}skymain
+    build:
+      context: .
+      dockerfile: skymain/Dockerfile
+
+  skysub:
+    image: ${DOCKER_REGISTRY-}skysub
+    build:
+      context: .
+      dockerfile: skysub/Dockerfile
+

@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Logging;
 
 namespace skymain
 {
@@ -14,6 +15,7 @@ namespace skymain
         {
             return WebHost.CreateDefaultBuilder(args)
                     .UseStartup<Startup>()
+                    .ConfigureLogging(logging => logging.AddAWSProvider())
                 ;
         }
     }

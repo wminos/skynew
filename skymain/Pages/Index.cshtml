@@ -1,6 +1,7 @@
 ﻿@page
 @using Microsoft.AspNetCore.Hosting
 @using Microsoft.Extensions.Configuration
+@using System.Collections
 @model IndexModel
 @inject IWebHostEnvironment HostEnv
 @inject IConfiguration Configuration
@@ -19,4 +20,24 @@
         <li>ENV:ASPNETCORE_ENVIRONMENT: @Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT")</li>
         <li>Configuration:ASPNETCORE_ENVIRONMENT: @Configuration["ASPNETCORE_ENVIRONMENT"]</li>
     </ul>
+
+    <div class="col-md-12">
+        <h2>Configurations</h2>
+        <ul>
+            @foreach (var (key, value) in Configuration.AsEnumerable())
+            {
+                <li>@key: @value</li>
+            }
+        </ul>
+    </div>
+
+    <div class="col-md-12">
+        <h2>OS Env</h2>
+        <ul>
+            @foreach (DictionaryEntry kv in new SortedList(Environment.GetEnvironmentVariables()))
+            {
+                <li>@kv.Key: @kv.Value</li>
+            }
+        </ul>
+    </div>
 </div>
