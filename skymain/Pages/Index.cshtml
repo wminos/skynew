@@ -2,11 +2,15 @@
 @using Microsoft.AspNetCore.Hosting
 @using Microsoft.Extensions.Configuration
 @using System.Collections
+@using System.Net.Http
 @model IndexModel
 @inject IWebHostEnvironment HostEnv
 @inject IConfiguration Configuration
+@inject IHttpClientFactory HttpClientFactory
+
 @{
     ViewData["Title"] = "Home page";
+    var apiEndpoint = Configuration["API_ENDPOINT"];
 }
 
 <div class="text-center">
@@ -38,6 +42,26 @@
             {
                 <li>@kv.Key: @kv.Value</li>
             }
+        </ul>
+    </div>
+    
+    <div class="col-md-12">
+        <h2>API Test: @apiEndpoint</h2>
+        <ul>
+            @{
+                string text;
+                try
+                {
+                    var client = HttpClientFactory.CreateClient();
+                    var response = await client.GetAsync(apiEndpoint);
+                    text = await response.Content.ReadAsStringAsync();
+                }
+                catch (Exception)
+                {
+                    text = $"error: endpoint={apiEndpoint}";
+                }
+            }
+            <li>@text</li>
         </ul>
     </div>
 </div>
